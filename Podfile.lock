@@ -1,0 +1,10 @@
+PODS:
+  - Optimizely-iOS-SDK (0.7.55)
+
+DEPENDENCIES:
+  - Optimizely-iOS-SDK (~> 0.7)
+
+SPEC CHECKSUMS:
+  Optimizely-iOS-SDK: 73fb9acc68e32df7a0a1f30909b7af4556aa7013
+
+COCOAPODS: 0.34.1

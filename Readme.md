@@ -32,11 +32,11 @@ Open the bridging header file and add the following lines to get Optimizely to w
 
 Next we need to initialize Optimizely in our app for which we will need an API token. To get this token, go to your [Optimizely Dashboard](https://www.optimizely.com/dashboard) and create an new project. Select iOS as the project type.
 
-![iOS Project](//cl.ly/image/0n2x3y2u3U2h/Bildschirmfoto%202014-10-07%20um%2013.43.31.png)
+![iOS Project](http://cl.ly/image/0n2x3y2u3U2h/Bildschirmfoto%202014-10-07%20um%2013.43.31.png)
 
 In the top right corner under Project Settings you will find the code to embed for Objective-C. As we are using Swift we cannot just use it out of the box. Copy the part after `[Optimizely startOptimizelyWithAPIToken: @"`. This is your API token. You should also write down your Project ID as we will need this in the next step.
                                                                                                                                                                                   
-                                                                                                                                                                                  ![API Token](//cl.ly/image/0l343F2m0i13/Bildschirmfoto%202014-10-07%20um%2013.44.22.png%202014-10-07%2019-02-35.png)
+                                                                                                                                                                                  ![API Token](http://cl.ly/image/0l343F2m0i13/Bildschirmfoto%202014-10-07%20um%2013.44.22.png%202014-10-07%2019-02-35.png)
 
 In Xcode open your *AppDelgate.swift* file add the following lines to the `didFinishLaunchingWithOptions` function and replace `YOUR_TOKEN_GOES_HERE` with your own API token
 
@@ -55,7 +55,7 @@ return true
 
 To allow Optimizely users to create an experiment without the need for Xcode we also need to add a custom URL. To do so go to the *Info* section of the app settings and open the *URL Types* section.
 
-![URL settings](//cl.ly/image/1b3Z0I2i2g0A/Bildschirmfoto%202014-10-07%20um%2013.48.50.png%202014-10-07%2019-08-28.png)
+![URL settings](http://cl.ly/image/1b3Z0I2i2g0A/Bildschirmfoto%202014-10-07%20um%2013.48.50.png%202014-10-07%2019-08-28.png)
 
 
 Add a new URL type and enter *com.optimizely* as the identifier. Use *optly{PROJECT_ID}* as the URL Scheme, e.g. optly1234567
@@ -63,7 +63,7 @@ Add a new URL type and enter *com.optimizely* as the identifier. Use *optly{PROJ
 Now you can run your project for the fist time. The Optimizely Build phase of your project will label automatically all views with user defined runtime attributes that Optimizely uses internally. However, with iOS 8 Apple introduced the feature to use a XIB file as the launch screen. Unfortunately, the LaunchScreen is not allowed to have any user defined runtime attributes. So we need to make sure that your LaunchScreen.xib does not use any. There are two solutions: Either you do not use the LaunchScreen and delete if from your project. Or you need to disable the Optimizely Build Script. Go to the Build Phases of settings of your project and select "Label Optimizely views". You can disable the script temporarily by adding `exit 0` as the first line of your script
 (found [here](http://stackoverflow.com/questions/1727148/how-to-temporarily-disable-a-run-script-phase-in-xcode)). 
 
-![Build settings](//cl.ly/image/0e3o2N0q3n26/Bildschirmfoto%202014-10-07%20um%2013.38.22.png)
+![Build settings](http://cl.ly/image/0e3o2N0q3n26/Bildschirmfoto%202014-10-07%20um%2013.38.22.png)
 
 Please note that whenever you add new views or elements to your app you need to re-enable this build phase once or tag your view manually.
 

@@ -1,1 +1,1 @@
-Example of how to use the Optimizely A/B SDK with Swift
+Example of how to use the Optimizely A/B testing SDK with Swift

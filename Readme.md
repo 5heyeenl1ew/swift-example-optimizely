@@ -36,7 +36,7 @@ Next we need to initialize Optimizely in our app for which we will need an API t
 
 In the top right corner under Project Settings you will find the code to embed for Objective-C. As we are using Swift we cannot just use it out of the box. Copy the part after `[Optimizely startOptimizelyWithAPIToken: @"`. This is your API token. You should also write down your Project ID as we will need this in the next step.
                                                                                                                                                                                   
-                                                                                                                                                                                  ![API Token](http://cl.ly/image/0l343F2m0i13/Bildschirmfoto%202014-10-07%20um%2013.44.22.png%202014-10-07%2019-02-35.png)
+![API Token](http://cl.ly/image/0l343F2m0i13/Bildschirmfoto%202014-10-07%20um%2013.44.22.png%202014-10-07%2019-02-35.png)
 
 In Xcode open your *AppDelgate.swift* file add the following lines to the `didFinishLaunchingWithOptions` function and replace `YOUR_TOKEN_GOES_HERE` with your own API token
 
@@ -65,7 +65,7 @@ Now you can run your project for the fist time. The Optimizely Build phase of yo
 
 ![Build settings](http://cl.ly/image/0e3o2N0q3n26/Bildschirmfoto%202014-10-07%20um%2013.38.22.png)
 
-Please note that whenever you add new views or elements to your app you need to re-enable this build phase once or tag your view manually.
+Please note that whenever you add new views or elements to your app you need to re-enable this build phase once or [tag your view manually.](http://developers.optimizely.com/ios/#visual-editor:-tag-your-views--8)
 
 
 Now you are ready to create your first experiment.
